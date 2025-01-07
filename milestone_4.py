@@ -14,23 +14,30 @@ class Hangman:
         guess = guess.lower()
         if guess in self.word:
             print(f"Good guess! {guess} is in the word.")
+            for index, letter in enumerate(self.word.lower()):
+                if letter.lower() == guess:
+                    self.word_guessed[index] = f"{letter}"
+            print (self.word_guessed)
+
         else:
             print(f"Sorry, {guess} is not in the word. Try again.")
+            self.num_lives = self.num_lives - 1
+            print(f"you have {self.num_lives} lives left")
 
     def ask_for_input(self):
+        print(self.word_guessed)
         while True: 
             guess = input("Enter a single letter: ").lower()
-            #print(guess)
-            if len(guess) != 1 and guess.isalpha() != True:
+
+            if len(guess) > 1 or guess.isalpha() == False:
                 print("Invalid letter. Please, enter a single alphabetical character.") 
             elif guess in self.list_of_guesses:
                 print("You already tried that letter!")
             else:
                 self.check_guess(guess)
+                self.list_of_guesses.append(guess)
 
-                self.list_of_guesses = self.list_of_guesses.append(guess)
-
-test = Hangman(["Mango", "Blueberries", "Watermelon", "Kiwi", "Apples"])
+test = Hangman(["Blueberries", "Papaya", "Kiwi", "Apples", "Banana"])
 test.ask_for_input()
             
     
