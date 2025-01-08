@@ -75,7 +75,6 @@ def play_game (word_list):
         if game.num_lives == 0: 
             return print ("You lost!")
         elif game.num_letters > 0:
-            print("in func letters", game.num_letters)
             game.ask_for_input()
         elif game.num_lives != 0 and game.num_letters == 0:
             return print("Congratulations. You won the game!")
