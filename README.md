@@ -31,11 +31,14 @@ The game provides instant feedback. Correct guesses reveal the corresponding let
 
 ### Installation instructions (macOS)
 1. Install homebrew
-2. Install miniconda
+
+3. Install miniconda
 <img width="348" alt="Screenshot 2025-01-08 at 15 05 07" src="https://github.com/user-attachments/assets/b51093e4-d005-4038-b60c-d8658ccfb7a7" />
-3. Intall python
+
+4. Intall python
 <img width="224" alt="Screenshot 2025-01-08 at 15 06 13" src="https://github.com/user-attachments/assets/5a60c054-d7d4-4129-ad18-b871e9feed84" />
-4. Intall VS Code
+
+5. Intall VS Code
 <img width="356" alt="Screenshot 2025-01-08 at 15 07 17" src="https://github.com/user-attachments/assets/8afa6ae0-dbe6-4938-bc71-0bf248ad94f9" />
 
 
