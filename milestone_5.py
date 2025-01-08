@@ -60,9 +60,16 @@ class Hangman:
             self.check_guess(guess)
             self.list_of_guesses.append(guess)
 
-test_list = ["Blueberries", "Papaya", "Kiwi", "Apples", "Banana"]
 
 def play_game (word_list):
+    """
+    This funciton plays the Hangman game. 
+
+    The funciton passes the list of words that can be guessed as a parameter. 
+    The funciton uses a while loop and if statment to determine if the player 
+    has, can continue to play or won the day. It creates an instance of the 
+    Hangman class, assigend to game, which determines how the game is played."
+    """
     game = Hangman(word_list)
     while True:
         if game.num_lives == 0: 
@@ -73,6 +80,7 @@ def play_game (word_list):
         elif game.num_lives != 0 and game.num_letters == 0:
             return print("Congratulations. You won the game!")
 
+test_list = ["Blueberries", "Papaya", "Kiwi", "Apples", "Banana"]
 
 play_game(test_list)
             
