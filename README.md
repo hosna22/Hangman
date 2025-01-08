@@ -12,7 +12,9 @@ I structured the game using a Hangman class to keep all attributes and methods i
 
 ### Features 
 #### Random Word Selection
-The game selects a random word from a predefined list for each round using the choice method from Python's random module.
+- The game selects a random word from a predefined list for each round using the choice method from Python's random module.
+<img width="383" alt="Screenshot 2025-01-08 at 14 32 34" src="https://github.com/user-attachments/assets/21b624c3-5952-474d-b07b-aeaf7c4c19cd" />
+
 
 #### Word Progress Display
 Players can see their progress with the word through placeholders for unrevealed letters. When a letter is guessed correctly, the letter is revealed in it's respective position.
