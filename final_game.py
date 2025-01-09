@@ -15,7 +15,7 @@ class Hangman:
         self.num_lives = num_lives 
         self.word = random.choice(word_list).lower()
         self.word_guessed = ['_' for letter in self.word] 
-        self.num_letters = len(list(set(self.word)))  
+        self.num_letters = len(set(self.word))  
         self.list_of_guesses = []
     
     def check_guess(self,guess):
@@ -26,14 +26,11 @@ class Hangman:
         is in the random word to be guessed and returns the letters position in the word 
         if guessed correctly. If guessed incorrectly, it reduces the players lives by 1. 
         """
-        guess = guess.lower()
-    
         if guess in self.word:
             print(f"Good guess! {guess} is in the word.")
             for index, letter in enumerate(self.word):
                 if letter == guess:
                     self.word_guessed[index] = f"{letter}"
-            print (self.word_guessed)
             self.num_letters -= 1
         else:
             print(f"Sorry, {guess} is not in the word. Try again.")
@@ -49,8 +46,7 @@ class Hangman:
         asked to input again. If the input passes the checks, it is appended to a list which 
         stores the players guesses to avoid the same letter being guessed twice.
         """
-        print(self.word_guessed)
-
+        print (self.word_guessed)
         guess = input("Enter a single letter: ").lower()
         if len(guess) > 1 or guess.isalpha() == False:
             print("Invalid letter. Please, enter a single alphabetical character.") 
@@ -76,11 +72,11 @@ def play_game (word_list):
             return print ("You lost!")
         elif game.num_letters > 0:
             game.ask_for_input()
-        elif game.num_lives != 0 and game.num_letters == 0:
+        else:
             return print("Congratulations. You won the game!")
 
-test_list = ["Blueberries", "Papaya", "Kiwi", "Apples", "Banana"]
-
-play_game(test_list)
+if __name__ == "__main__":
+    test_list = ["Blueberries", "Papaya", "Kiwi", "Apples", "Banana"]
+    play_game(test_list)
             
     
